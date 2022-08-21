@@ -7,8 +7,7 @@ class shop:
             print("\n\n\n\nThere are ",self.stock," Bikes Available.\n")   
             return self.stock
 
-    def rent_bike(self,no_of_bikes ):
-        no_of_bikes = user_input
+    def rent_bike(self, no_of_bikes ):
 
         if user_input < 0 :
             print ("Please Enter a Positive Value!")
@@ -21,7 +20,7 @@ class shop:
         else:
             now = datetime.datetime.now()
             print(now.ctime())
-            self.stock = self.stock - user_input
+            
             rent_type = int(input("\n\n\nChoose how much time you want to rent the bikes for...\n\n1.Hourly = Rs300 Per Hour.\n2.Daily = Rs1000 Per Day.\n3.Weekl = Rs5000 Per Week.\n\n"))
             print (rent_type)
             if rent_type == 1:
@@ -39,7 +38,7 @@ class shop:
             else:
                 print("Please Enter a Valide Plan!")
 
-        
+            return self.stock - user_input
         
 
 while True:

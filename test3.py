@@ -1,7 +1,7 @@
 import datetime
 now = datetime.datetime.now()
 class shop:
-    def __init__(self, stock = 90):
+    def __init__(self, stock ):
         self.stock = stock
 
     def show_stock(self):
@@ -33,7 +33,7 @@ class shop:
 
 
 while True:
-    obj = shop()
+    obj = shop(100)
     obj.show_stock()
     user_input = int(input("Enter the Number of Bikes you want to rent\n"))
     obj.validate_user_input(user_input)
