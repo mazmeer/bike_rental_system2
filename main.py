@@ -18,16 +18,16 @@ class shop:
             return None
 
         else:
-            now = datetime.datetime.now()
-            print(now.ctime())
-            
+
             rent_type = int(input("\n\n\nChoose how much time you want to rent the bikes for...\n\n1.Hourly = Rs300 Per Hour.\n2.Daily = Rs1000 Per Day.\n3.Weekl = Rs5000 Per Week.\n\n"))
-            print (rent_type)
+
             if rent_type == 1:
+
                 no_of_hours = int(input("\n\nEnter the Number of Hours\n"))
                 print ("\nYour Total is Rs", no_of_hours * 300)
 
             elif rent_type == 2:
+
                 no_of_days = int(input("\n\nEnter the Number of Days\n"))
                 print ("\nYour Total is Rs", no_of_days * 1000)
 
@@ -38,8 +38,8 @@ class shop:
             else:
                 print("Please Enter a Valide Plan!")
 
-            return self.stock - user_input
-        
+        self.stock = self.stock - no_of_bikes
+        return self.stock    
 
 while True:
     obj = shop(100)
