@@ -1,22 +1,27 @@
-vari = 0
+import datetime
 class shop:
     def __init__(self, stock = 90):
         self.stock = stock
 
     def show_stock(self):
             print("\n\n\n\nThere are ",self.stock," Bikes Available.\n")   
+            return self.stock
 
-    def rent_bike(self,no_of_bikes):
+    def rent_bike(self,no_of_bikes ):
+        no_of_bikes = user_input
 
         if user_input < 0 :
-                        print ("Please Enter a Positive Value!")
+            print ("Please Enter a Positive Value!")
+            return None
 
         elif user_input > self.stock :
             print ("Sorry... only ",self.stock," bike are available.")
+            return None
 
         else:
-            
-            self.stock = self.stock - no_of_bikes
+            now = datetime.datetime.now()
+            print(now.ctime())
+            self.stock = self.stock - user_input
             rent_type = int(input("\n\n\nChoose how much time you want to rent the bikes for...\n\n1.Hourly = Rs300 Per Hour.\n2.Daily = Rs1000 Per Day.\n3.Weekl = Rs5000 Per Week.\n\n"))
             print (rent_type)
             if rent_type == 1:
@@ -34,10 +39,8 @@ class shop:
             else:
                 print("Please Enter a Valide Plan!")
 
-            while vari == user_input:
-                self.stock = self.stock -1
-
-
+        
+        
 
 while True:
     obj = shop()
