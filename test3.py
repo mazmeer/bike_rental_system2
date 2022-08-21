@@ -32,9 +32,6 @@ class shop:
         print("\nYou have rented ",no_of_bikes," Bike(s) on Daily Basis at ",now.ctime(),"\nRs 5000 will be deducted from your account weekly")
 
 
-
-        
-
 while True:
     obj = shop()
     obj.show_stock()
